@@ -1,0 +1,38 @@
+POST http://localhost:8080/api/collections
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "the first collection",
+  "type": "Postage Stamp",
+  "description": "simple rare",
+  "cost": 1
+}
+
+###
+POST http://localhost:8080/api/collections
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "second collection",
+  "type": "Coin",
+  "description": "very rare",
+  "cost": 2
+}
+
+###
+POST http://localhost:8080/api/collections
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "third collection",
+  "type": "Postage Stamp",
+  "description": "not rare",
+  "cost": 3
+}
+
+
+###
+GET http://localhost:8080/api/collections

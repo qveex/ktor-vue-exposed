@@ -1,0 +1,60 @@
+GET http://localhost:8080/api/collections
+Accept: application/json
+
+###
+GET http://localhost:8080/api/collections/1
+
+###
+GET http://localhost:8080/api/collections/111
+
+###
+POST http://localhost:8080/api/collections
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "the first collection",
+  "type": "Postage Stamp",
+  "description": "very rare",
+  "cost": 300
+}
+
+###
+POST http://localhost:8080/api/collections
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "second collection",
+  "type": "Postage Stamp",
+  "description": "not rare",
+  "cost": 1
+}
+
+###
+GET http://localhost:8080/api/collections
+Accept: application/json
+
+###
+PUT http://localhost:8080/api/collections/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "the first collection but edited",
+  "type": "Postage Stamp",
+  "description": "I want a few bucks for it",
+  "cost": 301
+}
+
+###
+GET http://localhost:8080/api/collections
+
+###
+DELETE http://localhost:8080/api/collections/2
+
+###
+GET http://localhost:8080/api/collections
+
+###
+GET http://localhost:8080/api/collections/2
