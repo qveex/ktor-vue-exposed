@@ -51,7 +51,8 @@ export default {
           try {
             const hash = sjcl.codec.hex.fromBits(sjcl.hash.sha256.hash(this.password))
             const login = this.login
-            const response = await axios.post('https://localhost:8443/login', JSON.parse(JSON.stringify({login, hash})))
+            //const response = await axios.post('https://localhost:8443/login', JSON.parse(JSON.stringify({login, hash})))
+            const response = await axios.post('http://localhost:8080/login', JSON.parse(JSON.stringify({login, hash})))
             if (response.data.token != null) {
 
               store.commit('setAuth', true)
